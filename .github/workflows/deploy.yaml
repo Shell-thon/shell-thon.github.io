@@ -1,0 +1,29 @@
+name: Deploy Shell-thon Repository to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout shell-thon.github.io repository
+        uses: actions/checkout@v2
+        
+      - name: Remove old content
+        run: |
+          rm -rf *
+
+      - name: Checkout Shell-thon content
+        run: |
+          git clone --depth=1 https://github.com/Shell-thon/Shell-thon.git .
+          rm -rf .git  # Remove Git history to avoid conflicts
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .  # Deploy the root directory where the `index.html` should be
