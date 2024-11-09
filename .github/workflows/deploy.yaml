@@ -8,14 +8,14 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout shell-thon.github.io repository
         uses: actions/checkout@v2
-        
+
       - name: Remove old content
         run: |
-          rm -rf *
+          rm -rf ./* .[^.]*
 
       - name: Checkout Shell-thon content
         run: |
