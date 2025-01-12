@@ -26,7 +26,7 @@ Welcome to my GitHub profile! I am a passionate full stack software engineer wit
 - Cybersecurity
 
 Feel free to explore my repositories and projects. Connect with me on [LinkedIn](https://www.linkedin.com/in/jareymichael) for collaboration or any exciting opportunities!
-* **Shell-Thon** - [Visit site](http://shell-thon.me)
+* **Shell-Thon** - [Visit site](https://shell-thon.github.io)
 
 ![](https://github-readme-activity-graph.cyclic.app/graph?username=Shell-thon&theme=dark)
 
